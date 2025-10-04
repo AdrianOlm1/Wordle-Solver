@@ -1,0 +1,13 @@
+# Ignore numpy data files
+*.npy
+
+# (Optional) Also ignore Python cache, venv, and build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+build/
+dist/
+*.egg-info/
