@@ -1,6 +1,7 @@
 from collections import defaultdict
 import math
 import numpy as np
+import os
 from tqdm import tqdm
 
 # Loads all the words that you can guess
@@ -144,8 +145,8 @@ def questioning(guess):
     print(f"{len(remainingWords)} words remaining.")
 
 def wordle_solver():
-    global remainingWords, feedback_matrix
-    feedback_matrix = np.load("feedback_matrix.npy")
+    global remainingWords
+    load_feedback_matrix()
     remainingWords = answer_words.copy()
 
     for i in range(6):
